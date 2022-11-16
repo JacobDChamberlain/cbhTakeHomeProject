@@ -3,16 +3,27 @@ const {deterministicPartitionKey} = require("./dpk");
 
 console.log(deterministicPartitionKey());
 
-const key = "aksfhkasdnfkaesdf;aosdCvolkasvjailsjdknvsfnaslvbnlasedhvoaslbndvliasfbodzslkejnvzlsiDjvszldfibhlaksgnzxdfkivsjfrbnujnaszsxklfjvbnzldfkbhzsjknv;lrjbvnzl bdclzkbnzdslivjnZs…∂¬vhbzksdj bzsjdvkzvnd¬,j bzj,vdnbx jkxzdnfvkjzdnkf kjhzxjbnvkzjshknfbkzdsjnf kxdjfnbzdkjd";
+// const key = "aksfhkasdnfkaesdf;aosdCvolkasvjailsjdknvsfnaslvbnlasedhvoaslbndvliasfbodzslkejnvzlsiDjvszldfibhlaksgnzxdfkivsjfrbnujnaszsxklfjvbnzldfkbhzsjknv;lrjbvnzl bdclzkbnzdslivjnZs…∂¬vhbzksdj bzsjdvkzvnd¬,j bzj,vdnbx jkxzdnfvkjzdnkf kjhzxjbnvkzjshknfbkzdsjnf kxdjfnbzdkjd";
 
-console.log(deterministicPartitionKey(key));
-console.log(deterministicPartitionKey({partitionKey: key}));
-console.log(deterministicPartitionKey("shortkey"));
-console.log(deterministicPartitionKey({partitionKey: "shortkey"}));
+// console.log(deterministicPartitionKey(key));
+// console.log(deterministicPartitionKey({partitionKey: key}));
+// console.log(deterministicPartitionKey("shortkey"));
+// const data = JSON.stringify("shortkey");
+// const candi = crypto.createHash("sha3-512").update(data).digest("hex");
+// console.log(candi);
+// console.log(deterministicPartitionKey({awildkeyappears: "a wild key value appears"}));
+// const data2 = JSON.stringify({awildkeyappears: "a wild key value appears"});
+// const candi2 = crypto.createHash("sha3-512").update(data2).digest("hex");
+// console.log(candi2);
+// const data3 = JSON.stringify("a wild value appears");
+// const candi3 = crypto.createHash("sha3-512").update(data3).digest("hex");
+// console.log(data3);
 
-//* if a value or variable is entered (with NO partitionKey), the value or variable is hashed, and that is returned.
-//* if an object with a key of partitionKey whose value has a greater character length than MAX_PARTITION_KEY_LENGTH, the value will be hashed and returned.
-//* if an object with a key of partitionKey whose value has a character length less than MAX_PARTITION_KEY_LENGTH, the value will be returned as a string.
+// console.log(deterministicPartitionKey({partitionKey: "shortkey"}));
+
+//* if input is a value or variable (with NO partitionKey), the value or variable is hashed and returned as a string.
+//* if input is an object with a key of partitionKey whose value has a greater character length than MAX_PARTITION_KEY_LENGTH, the value will be hashed and returned as a string.
+//* if input is an object with a key of partitionKey whose value has a character length less than MAX_PARTITION_KEY_LENGTH, the value will be returned as a string.
 
 // console.log("----");
 

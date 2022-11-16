@@ -10,3 +10,4 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 
 ## Your Explanation Here
 
+I've noticed that if the input is an object without a partition key, or if the value is greater than max partition key length, the value of the key will be hashed and returned as a string. If an objet with a partition key is inputted, the value of that key will be returned as a string unaltered. I'm very new to all of this, but this was a very fun assignment and thank you for your time.
